@@ -1,0 +1,30 @@
+.heros {
+    padding: 3rem 0;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h2 {
+            text-align: center;
+            font-family: "Rozha One", sans-serif;
+            font-size: 2rem;
+
+            @media screen and (min-width: 768px) {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .more {
+            align-self: flex-end;
+            color: $clr-primary;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 5rem 0;
+    }
+}

@@ -1,0 +1,124 @@
+.footer {
+    padding: 4rem 0;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .logo {
+            width: 120px;
+            display: flex;
+        }
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            margin-bottom: .5rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .follow {
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 0.8rem;
+
+                a {
+                    display: flex;
+                }
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        .marvels {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                h5 {
+                    margin-bottom: 0.3rem;
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    color: $clr-light-white;
+                }
+            }
+
+            img {
+                width: 80px;
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+        color: rgba(255, 255, 255, .5);
+    }
+
+    .attribution {
+        text-align: center;
+
+        a {
+            color: $clr-primary;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (min-width: 540px) {
+
+        .container {
+            .logo {
+                align-self: center;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &-bottom {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+
+        &-links {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+
+        .marvels {
+            .content {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+    }
+}

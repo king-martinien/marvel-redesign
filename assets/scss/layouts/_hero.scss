@@ -1,0 +1,150 @@
+.hero {
+    height: 100vh;
+
+
+
+    .swiper {
+        height: 100%;
+
+        &-slide {
+            background-repeat: no-repeat;
+            position: relative;
+            background-color: $clr-black;
+            transition: .5s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                ;
+                z-index: 999;
+                background: linear-gradient(360deg, #030303 0%, rgba(3, 3, 3, 0) 50%);
+            }
+
+            &:first-child {
+                background-image: url("/assets/images/spider-man.png");
+                background-position: center center;
+                background-size: cover;
+
+            }
+
+            &:nth-child(2) {
+                background-color: #1A2738;
+                background-color: $clr-black;
+                background-image: url("/assets/images/captain-america-c.png");
+                background-position: center bottom;
+                background-size: contain;
+
+                &.swiper-slide-active {
+                    background-position: 50% bottom;
+                }
+
+            }
+
+            &:nth-child(3) {
+                transition: .5s ease;
+                background-image: url("/assets/images/tony-stark.png");
+                background-position: center center;
+                background-size: 5%;
+
+                &.swiper-slide-active {
+                    background-position: center bottom;
+                    background-size: 150%;
+                }
+
+                @media screen and (min-width:768px) {
+                    &.swiper-slide-active {
+                        background-position: center center;
+                        background-size: 50%;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 9999;
+    }
+
+    &-intro {
+        font-size: 14px;
+
+        h1 {
+            font-family: "Rozha One", sans-serif;
+            margin-bottom: .5rem;
+            font-size: 42px;
+            line-height: 60px;
+
+            span {
+                // background-color: $clr-white;
+                // color: $clr-primary;
+                padding: 0 .3rem;
+            }
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            max-width: 540px;
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media screen and (min-width: 375px) {
+            font-size: 16px;
+
+            h1 {
+                font-size: 52px;
+            }
+        }
+
+
+        @media screen and (min-width: 375px) {
+
+            h1 {
+                font-size: 3.6rem;
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 560px;
+
+        .swiper {
+            &-slide {
+
+                &:first-child {
+                    background-size: cover;
+                }
+
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 100vh;
+
+        .swiper {
+            &-slide {
+
+                &:first-child {
+                    background-size: 80%;
+                    background-position: center -200px;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    background-color: $clr-white;
+    color: $clr-primary;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-family: Roboto, sans-serif;
+    // background-color: rgb(0, 1, 12);
+    background-color: #030303;
+    color: $clr-white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    border-radius: .2rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+input {
+    border: 2px solid $clr-light-white;
+    color: $clr-light-white;
+    background-color: transparent;
+    border-radius: 8px;
+    height: 45px;
+    padding: 0 1.2rem;
+    width: 100%;
+
+    &::placeholder {
+        font-size: 1rem;
+        color: $clr-light-white;
+    }
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,74 @@
+.anouncements {
+    padding: 3rem 0;
+    position: relative;
+    background: right -120px center / cover no-repeat url("/assets/images/cover-anouncement.png");
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    &::before {
+        width: 100%;
+        background-color: rgba(255, 255, 255, .1);
+        backdrop-filter: blur(3px);
+    }
+
+    svg{
+        position: absolute;
+        top: 0;
+        left: 52%;
+        transform: translateX(-50%);
+        height: 100%;
+    }
+
+    &::after {
+        width: 50%;
+        background-color: $clr-black;
+    }
+
+
+    &-container {
+        position: relative;
+        z-index: 2;
+
+        img {
+            max-width: 200px;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: "Rozha One", sans-serif;
+            font-size: 2rem;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        // background: 150% top / 100% no-repeat url("/assets/images/cover-anouncement.png");
+        padding: 10rem 0;
+
+        &-container {
+            h2 {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        background: 120px center / cover no-repeat url("/assets/images/cover-anouncement.png");
+    }
+
+    @media screen and (min-width: 1240px) {
+        background: 120% center / 60% no-repeat url("/assets/images/cover-anouncement.png");       
+    }
+}

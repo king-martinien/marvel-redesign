@@ -1,0 +1,46 @@
+.last-news {
+    padding: 3rem 0;
+
+    &-container {
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .news {
+            display: flex;
+            gap: 1rem;
+
+            &-img,
+            a {
+                flex: 1;
+                align-self: flex-start;
+
+            }
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .news {
+
+                a:hover {
+                    color: $clr-primary;
+                    transition: .4s ease;
+                }
+            }
+
+        }
+    }
+}

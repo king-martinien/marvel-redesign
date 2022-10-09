@@ -1,0 +1,10 @@
+.series {
+    background-color: $clr-white;
+    color: $clr-black;
+
+    &-container {
+        padding: 3rem 1.5rem;
+        transform: translateY(-2rem);
+        background-color: inherit;
+    }
+}
